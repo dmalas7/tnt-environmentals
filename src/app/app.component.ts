@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tnt-environmentals';
+  title:string = 'tnt-environmentals';
+  versionNumber:number = 0.1;
 }
