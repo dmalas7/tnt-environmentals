@@ -1,10 +1,10 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <p>
-    Version {{ versionNumber}}
-  </p>
-</div>
+<mat-toolbar color="primary">  
+  <mat-toolbar-row>
+    <span routerLink="/" style="cursor:pointer">{{title}}</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/services">Services</button>
+    <button mat-button routerLink="/contact">Contact</button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
 <router-outlet></router-outlet>
