@@ -1,3 +1,11 @@
-<p>
-  services works!
-</p>
+<mat-grid-list cols="3">
+    <mat-grid-tile>
+      <pest-control-card [pestControlItem]="homePestControlService"></pest-control-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <pest-control-card [pestControlItem]="termitesAndLawnMaintenanceService"></pest-control-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <pest-control-card [pestControlItem]="lawnAndTreesService"></pest-control-card>
+    </mat-grid-tile>
+  </mat-grid-list>
