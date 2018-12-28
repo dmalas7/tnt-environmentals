@@ -10,7 +10,15 @@ export class ServicesComponent implements OnInit {
 
   constructor() { }
 
-  helloDianaMessage = 'Hello Diana';
+  currentIndex=0;
+  serviceImages:string[] = [
+    '../../assets/images/termites.jpg',
+    '../../assets/images/alex.jpg',
+    '../../assets/images/alex-spraying.jpg',
+    '../../assets/images/equipment.jpg',
+    '../../assets/images/injection.jpg',
+  ];
+
   homePestControlService: PestControlService={
     title:'Home Pest Control',
     types: [
@@ -48,5 +56,22 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  displayNextImage(){
+    if(this.currentIndex == this.serviceImages.length -1){
+      this.currentIndex = 0;
+    }else{
+      this.currentIndex++;
+    }
+  }
+
+  displayPrevImage(){
+    if(this.currentIndex == 0){
+      this.currentIndex = this.serviceImages.length -1;
+    }else{
+      this.currentIndex--;
+    }
+  }
+
 
 }

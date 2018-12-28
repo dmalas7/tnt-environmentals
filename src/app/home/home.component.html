@@ -1,45 +1,35 @@
-<mat-grid-list cols="2" rowHeight="4:1">
-    <mat-grid-tile>
-        <mat-card class="home-card">
-            <mat-card-header>
-              <mat-card-title>About TNT Environmental Services</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-              <p>
-                {{aboutFirstMessage}}                  
-              </p>            
-            </mat-card-content>
-          </mat-card>
-    </mat-grid-tile>
-  <mat-grid-tile>
-      <mat-card class="home-card">
-          <mat-card-header>
-            <mat-card-title>
-                TNT Environmental Services is certified in these areas:
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <ul>
-              <li *ngFor="let service of certifiedServices">
-                {{service}}
-              </li>
-            </ul>
-          </mat-card-content>
-        </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-      <mat-card class="home-card">
-          <img mat-card-image src="../../assets/images/tnt-logo.jpg" height="130">
-      </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-      <mat-card class="home-card">
-          <mat-card-content>
-            <p>
-              {{aboutSecondMessage}}                  
-            </p>            
-          </mat-card-content>
-      </mat-card>
-  </mat-grid-tile>
 
-</mat-grid-list>
+  
+<div style="display:flex">
+    <mat-card class="home-card">
+        <mat-card-header>
+          <mat-card-title>About TNT Environmental Services</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <img src="../../assets/images/tnt-logo.jpg" width="230" height="140">
+          <p>
+            {{aboutFirstMessage}}
+            <br>
+            <br>
+            {{aboutSecondMessage}}     
+          </p>            
+        </mat-card-content>
+      </mat-card>
+    
+      <mat-card class="home-card">
+        <mat-card-header>
+          <mat-card-title>
+              TNT Environmental Services is certified in these areas:
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ul>
+            <li *ngFor="let service of certifiedServices">
+              {{service}}
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+</div>
+
+  
